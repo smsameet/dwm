@@ -60,9 +60,20 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/bash", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *filemanager[]         = { "nautilus", NULL };
+static const char *browser[]             = { "firefox", NULL };
+static const char *emails[]              = { "thunderbird", NULL };
+static const char *office[]              = { "libreoffice", NULL };
+static const char *gimp[]                = { "gimp", NULL };
+static const char *lxappearance[]        = { "lxappearance", NULL };
+
+static char dmenumon[2]                  = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[]            = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *termcmd[]             = { "kitty", NULL };
+static const char *rofi[]                = { "rofi", "-show", "run",  NULL };
+static const char *upvol[]               = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
+static const char *downvol[]             = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL };
+static const char *powermanager[]        = { "/home/sammoosavi/.config/dwm/powermanager/powermanager.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
