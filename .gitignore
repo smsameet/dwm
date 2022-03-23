@@ -3,3 +3,5 @@ dwm
 dwm.o
 util.o
 config.h
+dwm.c.orig
+dwm.c.rej
