@@ -14,10 +14,11 @@ static const char col_gray4[]       = "#dbb671";  // forground activate color
 static const char col_bga[]         = "#579BD3";  // border activate color
 static const char col_bgd[]         = "#c678dd";  // border deactivate color
 static const char col_cyan[]        = "#1a212e";  // background activate color
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_bgd },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_bga  },
 };
 
 /* tagging */
