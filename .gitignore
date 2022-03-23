@@ -5,3 +5,5 @@ util.o
 config.h
 dwm.c.orig
 dwm.c.rej
+config.def.h.orig
+config.def.h.rej
