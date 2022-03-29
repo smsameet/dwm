@@ -64,9 +64,6 @@ static const Layout layouts[] = {
 static const char *filemanager[]         = { "nautilus", NULL };
 static const char *browser[]             = { "firefox", NULL };
 static const char *emails[]              = { "thunderbird", NULL };
-static const char *office[]              = { "libreoffice", NULL };
-static const char *gimp[]                = { "gimp", NULL };
-static const char *lxappearance[]        = { "lxappearance", NULL };
 
 static char dmenumon[2]                  = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]            = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
@@ -128,10 +125,7 @@ static Key keys[] = {
 	{ ALTKEY,                       XK_Down,   spawn,          {.v = downvol   } },
   { ControlMask,                  XK_f,      spawn,          {.v = filemanager}},
   { ControlMask,                  XK_b,      spawn,          {.v = browser}},
-  { ControlMask,                  XK_g,      spawn,          {.v = gimp}},
-  { ControlMask,                  XK_p,      spawn,          {.v = lxappearance}},
   { ControlMask,                  XK_e,      spawn,          {.v = emails}},
-  { ControlMask,                  XK_o,      spawn,          {.v = office}},
 };
 
 /* button definitions */
