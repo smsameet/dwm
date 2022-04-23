@@ -134,6 +134,8 @@ static Key keys[] = {
   { ControlMask,                  XK_f,      spawn,          {.v = filemanager}},
   { ControlMask,                  XK_b,      spawn,          {.v = browser}},
   { ControlMask,                  XK_e,      spawn,          {.v = emails}},
+  { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
 };
 
 /* button definitions */
