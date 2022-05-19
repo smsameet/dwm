@@ -134,9 +134,7 @@ static Key keys[] = {
 	{ MODKEY, 	                    XK_x,      spawn,          {.v = powermanager } },
   { ALTKEY,                       XK_Up,     spawn,          {.v = upvol } },
 	{ ALTKEY,                       XK_Down,   spawn,          {.v = downvol   } },
-  { ControlMask,                  XK_f,      spawn,          {.v = filemanager}},
-  { ControlMask,                  XK_b,      spawn,          {.v = browser}},
-  { ControlMask,                  XK_e,      spawn,          {.v = emails}},
+  { MODKEY,                       XK_e,      spawn,          {.v = emails}},
   { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
 };
