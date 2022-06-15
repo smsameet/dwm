@@ -1,0 +1,13 @@
+#!/bin/bash
+
+chosen=$(printf "  Cancle\n  Shutdown\n  Restart\n  Sleep\n  Lock\n  Logout" | rofi -dmenu -p "Power: ")
+
+case "$chosen" in
+	"  Cancle") exit 1 ;;
+	"  Shutdown") poweroff ;;
+	"  Restart") reboot ;;
+	"  Sleep") systemctl suspend ;;
+	"  Lock") i3lock ;;
+	"  Logout") pkill -u ${USER};;
+esac
+
