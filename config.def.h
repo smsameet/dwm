@@ -78,6 +78,7 @@ static const char *rofi[]                = { "rofi", "-show", "run",  NULL };
 static const char *upvol[]               = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
 static const char *downvol[]             = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL };
 static const char *powermanager[]        = { "/usr/bin/powermanager", NULL };
+static const char *Networkmgr[]		 = { "/usr/bin/Networkmgr", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -128,6 +129,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,                       XK_r,      quit,           {0} },
 	{ MODKEY,                       XK_x,      spawn,          {.v = powermanager } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = Networkmgr } },
         { ALTKEY,                       XK_Up,     spawn,          {.v = upvol } },
 	{ ALTKEY,                       XK_Down,   spawn,          {.v = downvol   } },
  	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
