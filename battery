@@ -1,0 +1,11 @@
+#! /bin/bash
+set -eu
+MIN_BAT=15
+MAX_BAT=95
+BATTERY=`cat /sys/class/power_supply/BAT0/capacity`
+
+if [[ $BATTERY -le $MIN_BAT ]]; then # Battery under low limit
+  notify-send "Battery under $MIN_BAT. Please plug in the adapter"
+elif [ $BATTERY -ge $MAX_BAT ]; then # Battery over high limit
+  notify-send "Battery above $MAX_BAT. Please remove the adapter"
+fi

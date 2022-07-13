@@ -8,8 +8,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=11.5:autohint=true", "Vazirmatn:size=11.5:autohint=true" };
-static const char dmenufont[]       = "JetBrains Mono Nerd Font:size=11.5:autohint=true";
+static const char *fonts[]          = { "JetBrainsMono :size=11.5:autohint=true", "Vazirmatn:size=11.5:autohint=true", "CaskaydiaCove Nerd Font :size=11.5:autohint=true", "Vazirmatn:size=11.5:autohint=true" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=11.5:autohint=true";
 static const char col_gray1[]       = "#1a212e";  // background normal color
 static const char col_gray2[]       = "#444444";  // border normal color
 static const char col_gray3[]       = "#dddddd";  // forground normal color
@@ -73,8 +73,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2]                  = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]            = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]             = { "kitty", NULL };
-static const char *rofi[]                = { "rofi", "-show", "run",  NULL };
+static const char *termcmd[]             = { "/usr/local/bin/st", NULL };
+static const char *rofi[]                = { "/bin/rofi", "-show", "run",  NULL };
 static const char *upvol[]               = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
 static const char *downvol[]             = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL };
 static const char *powermanager[]        = { "/usr/bin/powermanager", NULL };

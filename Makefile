@@ -37,12 +37,14 @@ dist: clean
 	rm -rf dwm-${VERSION}
 	rm -rf /usr/bin/powermanager
 	rm -rf /usr/bin/Networkmgr
+	rm -rf /usr/bin/battery
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	cp powermanager /usr/bin
 	cp Networkmgr /usr/bin
+	cp battery /usr/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
